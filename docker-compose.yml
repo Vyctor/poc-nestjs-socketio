@@ -1,0 +1,25 @@
+version: '3.7'
+
+services:
+  message-database:
+    image: postgres
+    container_name: message-database
+    restart: always
+    tty: true
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=ji1j1ik
+      - POSTGRES_DB=message_db
+    networks:
+      - message-network
+    volumes:
+      - pgdata:/data/postgres
+
+volumes:
+  pgdata:
+    driver: local
+networks:
+  message-network:
+    driver: bridge
