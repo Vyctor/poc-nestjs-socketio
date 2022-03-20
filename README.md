@@ -17,6 +17,6 @@ Desenvolvido um chat utilizando persistência no banco de dados, utilizando Nest
   npm run start
 
   #4. Abrir o projeto pelo caminho
-  ww.localhost:5000
+  www.localhost:5000
 
 ```
